@@ -1,0 +1,30 @@
+.quickbuy-top {
+    background: #f53d2d;
+    background: linear-gradient(-180deg, #f53d2d, #f63);
+    transition: transform .2s cubic-bezier(.4, 0, .2, 1);
+}
+
+.quickbuy-top--sticky {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateZ(0);
+    z-index: 100;
+}
+
+.navbar-wrapper {
+    background: transparent;
+    height: 2.125rem;
+    position: relative;
+    z-index: 400;
+}
+
+.container-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

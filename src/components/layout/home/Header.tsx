@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
+import './Header.css'
 
 export default function Header() {
     return (
-        <header style={{ padding: "10px", background: "#f5f5f5" }}>
-            <nav>
-                <Link to="/" style={{ marginRight: 10 }}>Home</Link>
-                <Link to="/about">About</Link>
-            </nav>
+        <header className="quickbuy-top quickbuy-top--sticky">
+            <div className="navbar-wrapper container-wrapper">
+                
+            </div>
         </header>
     );
 }
