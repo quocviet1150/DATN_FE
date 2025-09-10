@@ -9,6 +9,7 @@ export default function AppRouter() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
       </Route>
 
       <Route element={<AuthLayout />}>
