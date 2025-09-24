@@ -1,0 +1,51 @@
+.quickbuy-top-auth {
+  background: white;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quickbuy-top-auth--sticky {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateZ(0);
+  z-index: 100;
+}
+
+.navbar-wrapper-auth {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-wrapper-auth {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-logo {
+  width: 15%;
+}
+
+.navbar-title {
+  width: 20%;
+  font-size: 28px;
+  color: #fb8016;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-image {
+  width: 120px;
+  height: 120px;
+}
+
+.navbar-note {
+  display: flex;
+  width: 65%;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fb8016;
+  font-size: 18px;
+}
