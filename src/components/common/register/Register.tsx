@@ -11,7 +11,11 @@ export default function Register() {
 
   return (
     <div>
-      <div className="register-container">123</div>
+      <div className="register-container">
+        <div>
+            123
+        </div>
+      </div>
     </div>
   );
 }
