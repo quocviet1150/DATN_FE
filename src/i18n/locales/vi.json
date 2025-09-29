@@ -3,5 +3,13 @@
   "login": "Đăng nhập",
   "register": "Đăng ký",
   "logout": "Đăng xuất",
-  "help": "Bạn cần giúp đỡ?"
+  "help": "Bạn cần giúp đỡ?",
+  "username": "Tên đăng nhập",
+  "enter_username": "Nhập tên đăng nhập...",
+  "password": "Mật khẩu",
+  "enter_password": "Nhập mật khẩu...",
+  "confirm_password": "Xác nhận mật khẩu",
+  "forgot_password": "Quên mật khẩu?",
+  "or": "HOẶC",
+  "new_to_quickbuy": "Bạn mới biết đến quickbuy shop?"
 }

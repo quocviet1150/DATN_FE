@@ -3,5 +3,13 @@
   "login": "Login",
   "register": "Register",
   "logout": "Logout",
-  "help": "Do you need help?"
+  "help": "Do you need help?",
+  "username": "Username",
+  "enter_username": "Enter username...",
+  "password": "Password",
+  "enter_password": "Enter password...",
+  "confirm_password": "Confirm password",
+  "forgot_password": "Forgot password?",
+  "or": "OR",
+  "new_to_quickbuy": "New to quickbuy shop?"
 }

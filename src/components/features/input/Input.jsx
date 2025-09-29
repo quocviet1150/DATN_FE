@@ -1,8 +1,7 @@
 import React from "react";
-import "./Input.css"; // import file css riêng
+import "./Input.css";
 
 const Input = ({
-  label,
   value,
   onChange,
   type = "text",
