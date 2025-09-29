@@ -36,12 +36,12 @@ export default function Login() {
                 </div>
                 <div className="login-form">
                     <div className="login-title">{t("login")}</div>
-                    <form>
+                    <div className="form-container">
                         <Input
                             value={usernameOrEmail}
                             onChange={(e) => setUsernameOrEmail(e.target.value)}
                             placeholder={t("enter_username")}
-                            style={{ width: "320px" }}
+                            style={{ width: "100%" }}
                         />
 
                         <PasswordInput
@@ -67,7 +67,7 @@ export default function Login() {
                             <div>{t("new_to_quickbuy")}</div>
                             <div className="register-link" onClick={handleClick}>{t("register")}</div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
