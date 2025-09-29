@@ -1,17 +1,26 @@
 import React from "react";
-import "./Input.css";
+import "./Input.css"; // import file css riêng
 
-const Input = ({ label, type = "text", value, onChange, name }) => {
+const Input = ({
+  label,
+  value,
+  onChange,
+  type = "text",
+  placeholder,
+  error,
+  style = {},
+}) => {
   return (
-    <div className="input-group">
+    <div className="input-wrapper">
       <input
         type={type}
-        name={name}
         value={value}
         onChange={onChange}
-        required
+        placeholder={placeholder}
+        className={`input-field ${error ? "input-error" : ""}`}
+        style={style}
       />
-      <label>{label}</label>
+      {error && <p className="input-error-message">{error}</p>}
     </div>
   );
 };

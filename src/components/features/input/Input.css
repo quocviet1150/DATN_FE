@@ -1,39 +1,31 @@
-.input-group {
-  position: relative;
-  margin: 20px 0;
-  width: 100%;
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    width: 100%;
 }
 
-.input-group input {
-  width: 100%;
-  padding: 12px 12px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  font-size: 16px;
-  transition: border-color 0.3s;
+.input-field {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
 }
 
-.input-group input:focus {
-  border-color: #3b82f6; /* xanh dương */
+.input-field:focus {
+    outline: none;
+    border-color: #007bff;
 }
 
-.input-group label {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  font-size: 16px;
-  color: #aaa;
-  pointer-events: none;
-  transition: 0.3s;
-  background: white;
-  padding: 0 4px;
+.input-error {
+    border-color: red;
 }
 
-.input-group input:focus + label,
-.input-group input:not(:placeholder-shown) + label {
-  top: -8px;
-  font-size: 13px;
-  color: #3b82f6;
+.input-error-message {
+    margin-top: 4px;
+    font-size: 13px;
+    color: red;
 }

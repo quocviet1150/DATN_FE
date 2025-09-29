@@ -5,7 +5,7 @@ import Input from "../../features/input/Input";
 
 export default function Login() {
 
-    const [name, setName] = useState("");
+    const [username, setUsername] = useState("");
 
     useEffect(() => {
         login({ email: "test@gmail.com", password: "123456" })
@@ -23,10 +23,11 @@ export default function Login() {
                     <h2>Login</h2>
                     <form>
                         <Input
-                            label="Tên đăng nhập"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            name="username"
+                            label="Username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            placeholder="Nhập username..."
+                            style={{ width: "320px" }}
                         />
                     </form>
                 </div>
