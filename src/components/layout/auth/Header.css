@@ -16,7 +16,7 @@
   top: 0;
   transform: translateZ(0);
   z-index: 100;
-  height: 100px;
+  height: 80px;
 }
 
 .navbar-wrapper-auth {
@@ -28,7 +28,7 @@
 .container-wrapper-auth {
   display: flex;
   gap: 10px;
-  height: 100px;
+  height: 80px;
 }
 
 .navbar-logo {
@@ -37,7 +37,7 @@
 
 .navbar-title {
   width: 23%;
-  font-size: 28px;
+  font-size: 22px;
   color: #fb8016;
   display: flex;
   justify-content: flex-start;
@@ -45,8 +45,8 @@
 }
 
 .logo-image {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
 }
 
@@ -56,7 +56,7 @@
   justify-content: flex-end;
   align-items: center;
   color: #fb8016;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .navbar-note-title {
