@@ -24,7 +24,9 @@ export default function Header() {
             <img src={logo} alt="Logo" className="logo-image" />
           </div>
            <div className="navbar-title">{title}</div>
-          <div className="navbar-note">{t("help")}</div>
+          <div className="navbar-note">
+            <div className="navbar-note-title">{t("help")}</div>
+          </div>
         </div>
       </div>
     </header>

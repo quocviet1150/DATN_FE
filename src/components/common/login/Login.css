@@ -1,0 +1,22 @@
+.page-content {
+    display: block;
+    margin: 100px auto 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: #fb8016;
+    display: flex;
+    justify-content: center;
+}
+
+.login-container {
+    width: 50%;
+    display: flex;
+}
+
+.login-logo {
+    width: 50%;
+    background-image: url(../../../assets/quickbuyshopwhite.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
