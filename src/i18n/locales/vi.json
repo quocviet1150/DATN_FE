@@ -8,8 +8,32 @@
   "enter_username": "Nhập tên đăng nhập...",
   "password": "Mật khẩu",
   "enter_password": "Nhập mật khẩu...",
+  "enter_confirm_password": "Nhập lại mật khẩu...",
   "confirm_password": "Xác nhận mật khẩu",
   "forgot_password": "Quên mật khẩu?",
   "or": "HOẶC",
-  "new_to_quickbuy": "Bạn mới biết đến quickbuy shop?"
+  "new_to_quickbuy": "Bạn mới biết đến quickbuy shop?",
+  "enter_first_name": "Nhập tên...",
+  "enter_last_name": "Nhập họ...",
+  "enter_email": "Nhập email...",
+  "validation": {
+    "firstNameRequired": "Họ không được để trống",
+    "firstNameTooLong": "Họ không được vượt quá 50 ký tự",
+    "lastNameRequired": "Tên không được để trống",
+    "lastNameTooLong": "Tên không được vượt quá 50 ký tự",
+    "emailRequired": "Email không được để trống",
+    "emailInvalid": "Email không hợp lệ",
+    "emailTooLong": "Email không được vượt quá 255 ký tự",
+    "userNameRequired": "Tên đăng nhập không được để trống",
+    "userNameInvalid": "Tên đăng nhập không được chứa ký tự đặc biệt",
+    "userNameTooLong": "Tên đăng nhập không được vượt quá 255 ký tự",
+    "userNameTooShort": "Tên đăng nhập phải có ít nhất 6 ký tự",
+    "passwordRequired": "Mật khẩu không được để trống",
+    "passwordInvalid": "Mật khẩu bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt",
+    "passwordTooShort": "Mật khẩu phải có ít nhất 8 ký tự",
+    "passwordTooLong": "Mật khẩu không được vượt quá 255 ký tự",
+    "confirmPasswordMismatch": "Mật khẩu xác nhận không khớp",
+    "confirmPasswordRequired": "Xác nhận mật khẩu không được để trống",
+    "confirmPasswordTooLong": "Mật khẩu xác nhận không được vượt quá 255 ký tự"
+  }
 }

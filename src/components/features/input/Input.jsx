@@ -19,7 +19,7 @@ const Input = ({
         className={`input-field ${error ? "input-error" : ""}`}
         style={style}
       />
-      {error && <p className="input-error-message">{error}</p>}
+      {error && <div className="input-error-message">{error}</div>}
     </div>
   );
 };
