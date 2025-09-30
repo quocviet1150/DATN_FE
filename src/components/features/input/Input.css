@@ -26,6 +26,9 @@
 
 .input-error-message {
     margin-top: 4px;
-    font-size: 13px;
+    font-size: 10px;
     color: red;
+    margin-bottom: -20px;
+    display: flex;
+    justify-content: flex-start;
 }

@@ -8,8 +8,32 @@
   "enter_username": "Enter username...",
   "password": "Password",
   "enter_password": "Enter password...",
+  "enter_confirm_password": "Enter confirm password...",
   "confirm_password": "Confirm password",
   "forgot_password": "Forgot password?",
   "or": "OR",
-  "new_to_quickbuy": "New to quickbuy shop?"
+  "new_to_quickbuy": "New to quickbuy shop?",
+  "enter_first_name": "Enter first name...",
+  "enter_last_name": "Enter last name...",
+  "enter_email": "Enter email...",
+  "validation": {
+    "firstNameRequired": "First name is required",
+    "firstNameTooLong": "First name must not exceed 50 characters",
+    "lastNameRequired": "Last name is required",
+    "lastNameTooLong": "Last name must not exceed 50 characters",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "emailTooLong": "Email must not exceed 255 characters",
+    "userNameRequired": "Username is required",
+    "userNameInvalid": "Username must not contain special characters",
+    "userNameTooShort": "Username must be at least 6 characters",
+    "userNameTooLong": "Username must not exceed 255 characters",
+    "passwordRequired": "Password is required",
+    "passwordInvalid": "Password must include uppercase, lowercase, number, and special character",
+    "passwordTooShort": "Password must be at least 8 characters",
+    "passwordTooLong": "Password must not exceed 255 characters",
+    "confirmPasswordMismatch": "Passwords do not match",
+    "confirmPasswordRequired": "Confirm password is required",
+    "confirmPasswordTooLong": "Confirm password must not exceed 255 characters"
+  }
 }
