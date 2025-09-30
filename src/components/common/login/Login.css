@@ -9,12 +9,12 @@
 }
 
 .login-container {
-    width: 45%;
+    width: 50%;
     display: flex;
 }
 
 .login-logo {
-    width: 55%;
+    width: 50%;
     background-image: url(../../../assets/quickbuyshopwhite.png);
     background-size: contain;
     background-repeat: no-repeat;

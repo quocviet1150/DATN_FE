@@ -28,8 +28,10 @@ export default function Login() {
     };
 
     const handleForgotPassword = () => {
-        navigate("/forgot-password");
-    };
+    navigate("/forgot-password", {
+      state: { from: location.pathname },
+    });
+  };
 
     return (
         <div className="page-content">

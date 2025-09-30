@@ -14,7 +14,7 @@
 }
 
 .register-logo {
-    width: 50%;
+    width: 40%;
     background-image: url(../../../assets/quickbuyshopwhite.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@
 }
 
 .register-form {
-    width: 50%;
+    width: 60%;
     background-color: white;
     padding: 10px;
     margin: 25px;

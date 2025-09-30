@@ -93,7 +93,9 @@ export default function Register() {
   };
 
   const handleForgotPassword = () => {
-    navigate("/forgot-password");
+    navigate("/forgot-password", {
+      state: { from: location.pathname },
+    });
   };
 
   return (
