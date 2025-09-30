@@ -5,6 +5,7 @@ import Button from "../../features/button/Button";
 import Input from "../../features/input/Input";
 import PasswordInput from "../../features/passwordInput/PasswordInput";
 import "./Register.css";
+import { useNavigate } from "react-router-dom";
 
 interface FormErrors {
   firstName?: string;
@@ -17,6 +18,7 @@ interface FormErrors {
 
 export default function Register() {
 
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -86,6 +88,10 @@ export default function Register() {
     }
   };
 
+  const handleClick = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="page-content">
       <div className="register-container">
@@ -146,6 +152,16 @@ export default function Register() {
             <Button width="100%" variant="login-often" onClick={handleSubmit}>
               {t("register")}
             </Button>
+
+            <div className="social-register">
+              <div className="register">
+                <div>{t("renavigate_login")}</div>
+                <div className="login-link" onClick={handleClick}>{t("login")}</div>
+              </div>
+              <div className="forgot-password-register">
+                <div>{t("forgot_password")}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
