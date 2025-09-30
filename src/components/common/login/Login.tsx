@@ -28,6 +28,10 @@ export default function Login() {
         navigate("/register");
     };
 
+    const handleForgotPassword = () => {
+        navigate("/forgot-password");
+    };
+
     return (
         <div className="page-content">
             <div className="login-container">
@@ -57,7 +61,7 @@ export default function Login() {
                             {t("login")}
                         </Button>
 
-                        <div className="login-forgot-password">{t("forgot_password")}</div>
+                        <div className="login-forgot-password" onClick={handleForgotPassword}>{t("forgot_password")}</div>
 
                         <div className="divider">
                             <span>{t("or")}</span>

@@ -92,6 +92,10 @@ export default function Register() {
     navigate("/login");
   };
 
+  const handleForgotPassword = () => {
+    navigate("/forgot-password");
+  };
+
   return (
     <div className="page-content">
       <div className="register-container">
@@ -159,7 +163,7 @@ export default function Register() {
                 <div className="login-link" onClick={handleClick}>{t("login")}</div>
               </div>
               <div className="forgot-password-register">
-                <div>{t("forgot_password")}</div>
+                <div onClick={handleForgotPassword}>{t("forgot_password")}</div>
               </div>
             </div>
           </div>

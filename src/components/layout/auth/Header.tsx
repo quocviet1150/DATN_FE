@@ -14,6 +14,8 @@ export default function Header() {
     title = t("login");
   } else if (path === "/register") {
     title = t("register");
+  } else if (path === "/forgot-password") {
+    title = t("forgot_password_title");
   }
 
   return (
