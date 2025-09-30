@@ -36,5 +36,23 @@
     "confirmPasswordMismatch": "Passwords do not match",
     "confirmPasswordRequired": "Confirm password is required",
     "confirmPasswordTooLong": "Confirm password must not exceed 255 characters"
-  }
+  },
+  "footer_note": "We hope that all Vietnamese consumers will have access to and enjoy products of high quality, diverse in variety, safe for health, and convenient for everyday life. With the desire to bring a complete shopping experience, we are committed to providing trustworthy products, reasonable prices, and dedicated services to meet the ever-growing needs of our customers.",
+  "payment_method": "Payment method",
+  "policy": {
+    "policy": "Policy",
+    "payment_policy": "Payment Policy",
+    "purchase_instructions": "Purchase Instructions",
+    "personal_information_security": "Personal Information Security"
+  },
+  "general_information": "General Information",
+  "address": "Address:",
+  "phone": "Phone:",
+  "email": "Email:",
+  "linking_system": "Linking System",
+  "footer_by_me": "© 2025 QuickBuy Shop. All rights reserved. The website is developed and provided by Nguyen Quoc Viet, aiming to offer customers a fast, convenient, and secure shopping experience.",
+  "cash": "Cash",
+  "momo": "MoMo",
+  "paypal": "PayPal",
+  "vnpay": "VNPay"
 }
