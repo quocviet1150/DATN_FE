@@ -1,5 +1,15 @@
 import React from "react";
+import type { CSSProperties, ChangeEvent } from "react";
 import "./Input.css";
+
+interface InputProps {
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  type?: string;
+  placeholder?: string;
+  error?: string;
+  style?: CSSProperties;
+}
 
 const Input = ({
   value,
@@ -8,7 +18,7 @@ const Input = ({
   placeholder,
   error,
   style = {},
-}) => {
+}: InputProps) => {
   return (
     <div className="input-wrapper">
       <input

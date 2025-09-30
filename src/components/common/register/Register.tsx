@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateFields } from "../../../utils/Validation";
+import "./Register.css";
+import { useNavigate } from "react-router-dom";
 import Button from "../../features/button/Button";
 import Input from "../../features/input/Input";
 import PasswordInput from "../../features/passwordInput/PasswordInput";
-import "./Register.css";
-import { useNavigate } from "react-router-dom";
+import { validateFields } from "../../../utils/Validation";
 
 interface FormErrors {
   firstName?: string;
@@ -28,26 +28,26 @@ export default function Register() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState<FormErrors>({});
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     const rules = [
       {
-        field: "firstName",
+        field: "firstName" as const,
         value: firstName,
         required: true,
         maxLength: 50,
         customError: "validation.firstNameInvalid",
       },
       {
-        field: "lastName",
+        field: "lastName" as const,
         value: lastName,
         required: true,
         maxLength: 50,
         customError: "validation.lastNameInvalid",
       },
       {
-        field: "email",
+        field: "email" as const,
         value: email,
         required: true,
         maxLength: 255,
@@ -55,7 +55,7 @@ export default function Register() {
         customError: "validation.emailInvalid",
       },
       {
-        field: "userName",
+        field: "userName" as const,
         value: userName,
         required: true,
         minLength: 6,
@@ -64,7 +64,7 @@ export default function Register() {
         customError: "validation.userNameInvalid",
       },
       {
-        field: "password",
+        field: "password" as const,
         value: password,
         required: true,
         maxLength: 255,
@@ -72,7 +72,7 @@ export default function Register() {
         customError: "validation.passwordTooShort",
       },
       {
-        field: "confirmPassword",
+        field: "confirmPassword" as const,
         value: confirmPassword,
         required: true,
         maxLength: 255,
@@ -141,7 +141,7 @@ export default function Register() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder={t("enter_password")}
-              style={{ width: "100%" }}
+              width="100%"
               error={errors.password}
             />
 
@@ -149,7 +149,7 @@ export default function Register() {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder={t("enter_confirm_password")}
-              style={{ width: "100%" }}
+              width="100%"
               error={errors.confirmPassword}
             />
 

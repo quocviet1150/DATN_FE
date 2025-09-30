@@ -1,6 +1,17 @@
 import React, { useState } from "react";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"; // 👁️ icon
+import type { ChangeEvent } from "react";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"; 
 import "./PasswordInput.css";
+
+interface PasswordInputProps {
+    value: string;
+    onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+    placeholder?: string;
+    error?: string;
+    width?: string | number;
+    className?: string;
+    id?: string;
+}
 
 const PasswordInput = ({
     value,
@@ -9,12 +20,13 @@ const PasswordInput = ({
     error = "",
     width = "100%",
     className = "",
-    id
-}) => {
+    id,
+}: PasswordInputProps) => {
     const [visible, setVisible] = useState(false);
 
     const toggleVisible = () => setVisible((v) => !v);
-    const inputId = id || `password-input-${Math.random().toString(36).substr(2, 9)}`;
+    const inputId =
+        id || `password-input-${Math.random().toString(36).substr(2, 9)}`;
 
     return (
         <div className={`pw-wrapper ${className}`} style={{ width }}>
@@ -26,6 +38,8 @@ const PasswordInput = ({
                     value={value}
                     onChange={onChange}
                     placeholder={placeholder}
+                    aria-invalid={!!error}
+                    aria-describedby={error ? `${inputId}-error` : undefined}
                 />
 
                 <button

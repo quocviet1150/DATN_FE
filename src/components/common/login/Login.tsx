@@ -2,16 +2,15 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../../api/auth";
-import Button from "../../features/button/Button";
+import "./Login.css";
 import Input from "../../features/input/Input";
 import PasswordInput from "../../features/passwordInput/PasswordInput";
-import "./Login.css";
+import Button from "../../features/button/Button";
 
 export default function Login() {
     const navigate = useNavigate();
     const { t } = useTranslation();
     const [pw, setPw] = useState("");
-    const [err, setErr] = useState("");
     const [usernameOrEmail, setUsernameOrEmail] = useState("");
 
     useEffect(() => {
@@ -20,8 +19,8 @@ export default function Login() {
             .catch(err => console.error(err));
     }, []);
 
-    const handleChange = (e) => {
-        setPw(e.target.value);
+    const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+        setPw(e.currentTarget.value);
     };
 
     const handleClick = () => {
@@ -52,9 +51,7 @@ export default function Login() {
                             value={pw}
                             onChange={handleChange}
                             placeholder={t("enter_password")}
-                            error={err}
                             width="100%"
-                            style={{ marginBottom: "40px", marginTop: "40px" }}
                         />
 
                         <Button width="100%" variant="login-often" onClick={() => alert("Primary")}>
