@@ -84,7 +84,9 @@ export default function Register() {
     const errors = validateFields(rules, t);
     setErrors(errors);
     if (Object.keys(errors).length === 0) {
-      // ✅ Submit form
+      navigate("/verify", {
+        state: { from: location.pathname },
+      });
     }
   };
 

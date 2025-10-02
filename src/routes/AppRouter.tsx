@@ -5,6 +5,7 @@ import AuthLayout from "../components/layout/AuthLayout";
 import Login from "../components/features/account/login/Login";
 import Register from "../components/features/account/register/Register";
 import ForgotPassword from "../components/features/account/forgotPassword/ForgotPassword";
+import Verify from "../components/features/account/verify/Verify";
 
 export default function AppRouter() {
   return (
@@ -18,6 +19,7 @@ export default function AppRouter() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/verify" element={<Verify />} />
       </Route>
     </Routes>
   );

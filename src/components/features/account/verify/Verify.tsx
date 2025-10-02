@@ -3,41 +3,29 @@ import { useTranslation } from 'react-i18next';
 import { FaArrowLeft } from "react-icons/fa";
 import Button from "../../../common/button/Button";
 import Input from "../../../common/input/Input";
-import './ForgotPassword.css';
+import './Verify.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-export default function ForgotPassword() {
+export default function Verify() {
 
     const { t } = useTranslation();
-    const [email, setEmail] = useState("");
+    const [code, setCode] = useState("");
     const [error, setError] = useState("");
     const location = useLocation();
     const navigate = useNavigate();
     const from = (location.state as { from?: string })?.from || "/";
 
-
-    const validateEmail = (email: string) => {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
+    const handleBack = () => {
+        navigate(from);
     };
 
-    const handleNext = () => {
-        if (!email) {
-            setError(t("validation.emailRequired"));
-            return;
-        }
-        if (!validateEmail(email)) {
-            setError(t("validation.emailInvalid"));
+    const handleConfirm = () => {
+        if (!code) {
+            setError(t("validation.codeRequired"));
             return;
         }
         setError("");
-        navigate("/verify", {
-            state: { from: location.pathname },
-        });
-    };
-
-    const handleBack = () => {
-        navigate(from);
+        navigate("/login");
     };
 
     return (
@@ -46,20 +34,20 @@ export default function ForgotPassword() {
                 <div className="forgot-password-box">
                     <div className="forgot-password-title">
                         <div>
-                            <FaArrowLeft className="back-icon-svg" onClick={handleBack} />
+                            <FaArrowLeft className="back-icon-svg" onClick={handleBack}/>
                         </div>
-                        <div className='forgot-password-title-label'>{t("forgot_password_title")}</div>
+                        <div className='forgot-password-title-label'>{t("verify")}</div>
                     </div>
                     <Input
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder={t("enter_email")}
+                        value={code}
+                        onChange={(e) => setCode(e.target.value)}
+                        placeholder={t("enter_code")}
                         error={error}
                         style={{ width: "100%", display: "block", margin: "10px auto 0 auto" }}
                     />
 
-                    <Button width="100%" variant="login-often" onClick={handleNext}>
-                        {t("next")}
+                    <Button width="100%" variant="login-often" onClick={handleConfirm}>
+                        {t("confirm")}
                     </Button>
                 </div>
             </div>

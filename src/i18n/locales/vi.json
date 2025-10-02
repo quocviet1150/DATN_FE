@@ -36,7 +36,8 @@
     "passwordTooLong": "Mật khẩu không được vượt quá 255 ký tự",
     "confirmPasswordMismatch": "Mật khẩu xác nhận không khớp",
     "confirmPasswordRequired": "Xác nhận mật khẩu không được để trống",
-    "confirmPasswordTooLong": "Mật khẩu xác nhận không được vượt quá 255 ký tự"
+    "confirmPasswordTooLong": "Mật khẩu xác nhận không được vượt quá 255 ký tự",
+    "codeRequired": "Mã xác nhận không được để trống"
   },
   "footer_note": "Chúng tôi hi vọng tất cả người tiêu dùng Việt Nam sẽ được tiếp cận và sử dụng những sản phẩm chất lượng, đa dạng về mẫu mã, an toàn cho sức khỏe và tiện lợi trong cuộc sống hằng ngày. Với mong muốn mang đến trải nghiệm mua sắm trọn vẹn, chúng tôi cam kết cung cấp những mặt hàng uy tín, giá cả hợp lý và dịch vụ tận tâm để phục vụ nhu cầu ngày càng cao của khách hàng.",
   "payment_method": "Phương thức thanh toán",
@@ -56,5 +57,8 @@
   "momo": "MoMo",
   "paypal": "PayPal",
   "vnpay": "VNPay",
-  "next":"Tiếp theo"
+  "next":"Tiếp theo",
+  "confirm":"Xác nhận",
+  "enter_code": "Nhập mã xác nhận...",
+  "verify": "Xác thực"
 }

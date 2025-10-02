@@ -36,7 +36,8 @@
     "passwordTooLong": "Password must not exceed 255 characters",
     "confirmPasswordMismatch": "Passwords do not match",
     "confirmPasswordRequired": "Confirm password is required",
-    "confirmPasswordTooLong": "Confirm password must not exceed 255 characters"
+    "confirmPasswordTooLong": "Confirm password must not exceed 255 characters",
+    "codeRequired": "Verification code is required"
   },
   "footer_note": "We hope that all Vietnamese consumers will have access to and enjoy products of high quality, diverse in variety, safe for health, and convenient for everyday life. With the desire to bring a complete shopping experience, we are committed to providing trustworthy products, reasonable prices, and dedicated services to meet the ever-growing needs of our customers.",
   "payment_method": "Payment method",
@@ -56,5 +57,8 @@
   "momo": "MoMo",
   "paypal": "PayPal",
   "vnpay": "VNPay",
-  "next":"Next"
+  "next":"Next",
+  "confirm":"Confirm",
+  "enter_code": "Enter verification code...",
+  "verify": "Verify"
 }
