@@ -6,6 +6,7 @@ import Button from "../../../common/button/Button";
 import Input from "../../../common/input/Input";
 import PasswordInput from "../../../common/passwordInput/PasswordInput";
 import { validateFields } from "../../../../utils/Validation";
+import Loading from "../../../common/loading/Loading";
 
 interface FormErrors {
   firstName?: string;
@@ -27,6 +28,7 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState<FormErrors>({});
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -91,14 +93,24 @@ export default function Register() {
   };
 
   const handleClick = () => {
-    navigate("/login");
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigate("/login");
+    }, 500);
   };
 
   const handleForgotPassword = () => {
-    navigate("/forgot-password", {
-      state: { from: location.pathname },
-    });
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigate("/forgot-password", {
+        state: { from: location.pathname },
+      });
+    }, 500);
   };
+
+  if (loading) return <Loading />;
 
   return (
     <div className="page-content">

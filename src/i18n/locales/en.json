@@ -60,5 +60,6 @@
   "next":"Next",
   "confirm":"Confirm",
   "enter_code": "Enter verification code...",
-  "verify": "Verify"
+  "verify": "Verify",
+  "loading": "Processing"
 }

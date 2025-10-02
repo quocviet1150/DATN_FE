@@ -60,5 +60,6 @@
   "next":"Tiếp theo",
   "confirm":"Xác nhận",
   "enter_code": "Nhập mã xác nhận...",
-  "verify": "Xác thực"
+  "verify": "Xác thực",
+  "loading": "Đang xử lý"
 }

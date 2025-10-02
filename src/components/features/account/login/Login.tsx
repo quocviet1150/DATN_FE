@@ -6,12 +6,14 @@ import "./Login.css";
 import Input from "../../../common/input/Input";
 import PasswordInput from "../../../common/passwordInput/PasswordInput";
 import Button from "../../../common/button/Button";
+import Loading from "../../../common/loading/Loading";
 
 export default function Login() {
     const navigate = useNavigate();
     const { t } = useTranslation();
     const [pw, setPw] = useState("");
     const [usernameOrEmail, setUsernameOrEmail] = useState("");
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         login({ email: "test@gmail.com", password: "123456" })
@@ -24,14 +26,24 @@ export default function Login() {
     };
 
     const handleClick = () => {
-        navigate("/register");
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            navigate("/register");
+        }, 500);
     };
 
     const handleForgotPassword = () => {
-    navigate("/forgot-password", {
-      state: { from: location.pathname },
-    });
-  };
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            navigate("/forgot-password", {
+                state: { from: location.pathname },
+            });
+        }, 500);
+    };
+
+    if (loading) return <Loading />;
 
     return (
         <div className="page-content">
