@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaArrowLeft } from "react-icons/fa";
-import Button from "../../features/button/Button";
-import Input from "../../features/input/Input";
+import Button from "../../../common/button/Button";
+import Input from "../../../common/input/Input";
 import './ForgotPassword.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 

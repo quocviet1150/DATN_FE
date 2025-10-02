@@ -9,20 +9,20 @@
 }
 
 .register-container {
-    width: 50%;
+    width: 60%;
     display: flex;
 }
 
 .register-logo {
-    width: 40%;
-    background-image: url(../../../assets/quickbuyshopwhite.png);
+    width: 50%;
+    background-image: url(../../../../assets/quickbuyshopwhite.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .register-form {
-    width: 60%;
+    width: 50%;
     background-color: white;
     padding: 10px;
     margin: 25px;

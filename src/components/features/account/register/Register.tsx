@@ -2,10 +2,10 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
-import Button from "../../features/button/Button";
-import Input from "../../features/input/Input";
-import PasswordInput from "../../features/passwordInput/PasswordInput";
-import { validateFields } from "../../../utils/Validation";
+import Button from "../../../common/button/Button";
+import Input from "../../../common/input/Input";
+import PasswordInput from "../../../common/passwordInput/PasswordInput";
+import { validateFields } from "../../../../utils/Validation";
 
 interface FormErrors {
   firstName?: string;
