@@ -5,6 +5,7 @@ import Button from "../../../common/button/Button";
 import Input from "../../../common/input/Input";
 import './Verify.css';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Loading from '../../../common/loading/Loading';
 
 export default function Verify() {
 
@@ -14,9 +15,14 @@ export default function Verify() {
     const location = useLocation();
     const navigate = useNavigate();
     const from = (location.state as { from?: string })?.from || "/";
+    const [loading, setLoading] = useState(false);
 
     const handleBack = () => {
-        navigate(from);
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            navigate(from);
+        }, 200);
     };
 
     const handleConfirm = () => {
@@ -27,6 +33,8 @@ export default function Verify() {
         setError("");
         navigate("/login");
     };
+
+    if (loading) return <Loading />;
 
     return (
         <div className="page-content-forgot-password">

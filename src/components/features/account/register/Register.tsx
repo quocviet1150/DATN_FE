@@ -97,7 +97,7 @@ export default function Register() {
     setTimeout(() => {
       setLoading(false);
       navigate("/login");
-    }, 500);
+    }, 200);
   };
 
   const handleForgotPassword = () => {
@@ -107,7 +107,7 @@ export default function Register() {
       navigate("/forgot-password", {
         state: { from: location.pathname },
       });
-    }, 500);
+    }, 200);
   };
 
   if (loading) return <Loading />;

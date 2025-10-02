@@ -5,6 +5,7 @@ import Button from "../../../common/button/Button";
 import Input from "../../../common/input/Input";
 import './ForgotPassword.css';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Loading from '../../../common/loading/Loading';
 
 export default function ForgotPassword() {
 
@@ -14,6 +15,7 @@ export default function ForgotPassword() {
     const location = useLocation();
     const navigate = useNavigate();
     const from = (location.state as { from?: string })?.from || "/";
+    const [loading, setLoading] = useState(false);
 
 
     const validateEmail = (email: string) => {
@@ -37,8 +39,14 @@ export default function ForgotPassword() {
     };
 
     const handleBack = () => {
-        navigate(from);
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            navigate(from);
+        }, 200);
     };
+
+    if (loading) return <Loading />;
 
     return (
         <div className="page-content-forgot-password">

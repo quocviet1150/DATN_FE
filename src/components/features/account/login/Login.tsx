@@ -30,7 +30,7 @@ export default function Login() {
         setTimeout(() => {
             setLoading(false);
             navigate("/register");
-        }, 500);
+        }, 200);
     };
 
     const handleForgotPassword = () => {
@@ -40,7 +40,7 @@ export default function Login() {
             navigate("/forgot-password", {
                 state: { from: location.pathname },
             });
-        }, 500);
+        }, 200);
     };
 
     if (loading) return <Loading />;
