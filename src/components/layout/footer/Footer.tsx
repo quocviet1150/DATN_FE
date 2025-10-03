@@ -68,15 +68,15 @@ export default function Footer() {
             <div className="footer-title">{t("linking_system")}</div>
             <div className="footer-icon">
               <div className="icon-box zalo">
-                <SiZalo size={28} />
+                <SiZalo size={14} />
               </div>
 
               <div className="icon-box facebook">
-                <AiFillFacebook size={28} />
+                <AiFillFacebook size={14} />
               </div>
 
               <div className="icon-box instagram">
-                <SiInstagram size={28} />
+                <SiInstagram size={14} />
               </div>
             </div>
           </div>

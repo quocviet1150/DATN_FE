@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../../../api/auth";
+import { login } from "../../../api/auth";
 import "./Login.css";
-import Input from "../../../common/input/Input";
-import PasswordInput from "../../../common/passwordInput/PasswordInput";
-import Button from "../../../common/button/Button";
-import Loading from "../../../common/loading/Loading";
+import Input from "../../../components/common/input/Input";
+import PasswordInput from "../../../components/common/passwordInput/PasswordInput";
+import Button from "../../../components/common/button/Button";
+import Loading from "../../../components/common/loading/Loading";
 
 export default function Login() {
     const navigate = useNavigate();

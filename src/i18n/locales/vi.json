@@ -61,5 +61,8 @@
   "confirm":"Xác nhận",
   "enter_code": "Nhập mã xác nhận...",
   "verify": "Xác thực",
-  "loading": "Đang xử lý"
+  "loading": "Đang xử lý",
+  "connect": "Kết nối",
+  "support": "Hỗ trợ",
+  "language": "Ngôn ngữ"
 }

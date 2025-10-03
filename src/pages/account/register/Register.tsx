@@ -2,11 +2,11 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
-import Button from "../../../common/button/Button";
-import Input from "../../../common/input/Input";
-import PasswordInput from "../../../common/passwordInput/PasswordInput";
-import { validateFields } from "../../../../utils/Validation";
-import Loading from "../../../common/loading/Loading";
+import Button from "../../../components/common/button/Button";
+import Input from "../../../components/common/input/Input";
+import PasswordInput from "../../../components/common/passwordInput/PasswordInput";
+import { validateFields } from "../../../utils/Validation";
+import Loading from "../../../components/common/loading/Loading";
 
 interface FormErrors {
   firstName?: string;

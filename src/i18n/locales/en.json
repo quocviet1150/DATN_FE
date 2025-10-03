@@ -61,5 +61,8 @@
   "confirm":"Confirm",
   "enter_code": "Enter verification code...",
   "verify": "Verify",
-  "loading": "Processing"
+  "loading": "Processing",
+  "connect": "Connect",
+  "support": "Support",
+  "language": "Language"
 }

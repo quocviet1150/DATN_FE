@@ -1,4 +1,3 @@
-// ✅ Định nghĩa các key của field (liên kết chặt chẽ với fieldKeys)
 type FieldKey =
   | "firstName"
   | "lastName"
@@ -7,7 +6,6 @@ type FieldKey =
   | "password"
   | "confirmPassword";
 
-// ✅ Map thông điệp lỗi cho từng field
 const fieldKeys: Record<
   FieldKey,
   Partial<{
@@ -50,7 +48,6 @@ const fieldKeys: Record<
   },
 };
 
-// ✅ Kiểu dữ liệu cho 1 rule validate
 interface ValidationRule {
   field: FieldKey;
   value: string;
@@ -63,10 +60,8 @@ interface ValidationRule {
   noSpaces?: boolean;
 }
 
-// ✅ Kiểu lỗi trả về
 type Errors = Partial<Record<FieldKey, string>>;
 
-// ✅ Hàm validate chính
 export const validateFields = (
   rules: ValidationRule[],
   t: (key: string, options?: Record<string, unknown>) => string
