@@ -64,5 +64,10 @@
   "loading": "Processing",
   "connect": "Connect",
   "support": "Support",
-  "language": "Language"
+  "language": "Language",
+  "my_account": "My Account",
+  "my_purchases": "My Purchases",
+  "search": {
+    "placeholder_input_header": "Search for products, brands..."
+  }
 }

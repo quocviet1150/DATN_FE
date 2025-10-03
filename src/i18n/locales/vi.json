@@ -57,12 +57,17 @@
   "momo": "MoMo",
   "paypal": "PayPal",
   "vnpay": "VNPay",
-  "next":"Tiếp theo",
-  "confirm":"Xác nhận",
+  "next": "Tiếp theo",
+  "confirm": "Xác nhận",
   "enter_code": "Nhập mã xác nhận...",
   "verify": "Xác thực",
   "loading": "Đang xử lý",
   "connect": "Kết nối",
   "support": "Hỗ trợ",
-  "language": "Ngôn ngữ"
+  "language": "Ngôn ngữ",
+  "my_account": "Tài khoản của tôi",
+  "my_purchases": "Đơn mua",
+  "search": {
+    "placeholder_input_header": "Tìm kiếm sản phẩm, thương hiệu..."
+  }
 }

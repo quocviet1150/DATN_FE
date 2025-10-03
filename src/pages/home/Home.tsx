@@ -4,7 +4,7 @@ import "./Home.css";
 export default function Home() {
     const { t } = useTranslation();
     return (
-        <div>
+        <div className="main-content">
             <h1>{t("welcome")}</h1>
         </div>
     );

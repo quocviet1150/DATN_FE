@@ -1,18 +1,21 @@
-import { SiInstagram, SiZalo } from 'react-icons/si';
-import './Header.css'
-import { AiFillFacebook } from 'react-icons/ai';
-import { useTranslation } from 'react-i18next';
-import { FaQuestionCircle, FaChevronDown } from "react-icons/fa";
-import ReactCountryFlag from 'react-country-flag';
 import { useState } from 'react';
-import Loading from '../../common/loading/Loading';
+import ReactCountryFlag from 'react-country-flag';
+import { useTranslation } from 'react-i18next';
+import { AiFillFacebook } from 'react-icons/ai';
+import { FaChevronDown, FaQuestionCircle, FaShoppingCart } from "react-icons/fa";
+import { SiInstagram, SiZalo } from 'react-icons/si';
 import { useNavigate } from 'react-router-dom';
+import logo from "../../../assets/quickbuyshopwhite.png";
+import Loading from '../../common/loading/Loading';
+import NavbarSearch from '../../common/navbarSearch/NavbarSearch';
+import './Header.css';
 
 export default function Header() {
 
     const { t, i18n } = useTranslation();
     const [loading, setLoading] = useState(false);
-    const token = '123'
+    const token = '';
+    const cartCount = 25;
     const navigate = useNavigate();
 
     const getLanguageLabel = () => {
@@ -98,8 +101,22 @@ export default function Header() {
                             <div className="navbar-container-account-item">
                                 {token ? (
                                     <div>
-                                        <div className="navbar-container-account-item" onClick={() => handleNavigate("/profile")}>
-                                            {t('profile')}
+                                        <div className="navbar-container-account-item">
+                                            <div className="avatar">
+                                                <img
+                                                    src="https://i.pravatar.cc/300"
+                                                    alt="Avatar"
+                                                />
+                                            </div>
+                                            <div className="username">
+                                                vietnq
+                                            </div>
+
+                                            <ul className="user-popup">
+                                                <li>{t('my_account')}</li>
+                                                <li>{t('my_purchases')}</li>
+                                                <li>{t('logout')}</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 ) : (
@@ -120,7 +137,20 @@ export default function Header() {
                         </div>
                     </div>
                     <div className="navbar-header">
-                        1
+                        <div className="navbar-header-logo" onClick={() => handleNavigate("/")}>
+                            <img src={logo} alt="Logo" className="logo-image-1" />
+                        </div>
+
+                        <div className="navbar-header-search">
+                            <NavbarSearch />
+                        </div>
+
+                        <div className='navbar-header-cart-container'>
+                            <div className="navbar-header-cart">
+                                <FaShoppingCart className='cart-icon' />
+                                <span className="cart-badge">{cartCount}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
