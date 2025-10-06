@@ -15,7 +15,7 @@ export default function Header() {
 
     const { t, i18n } = useTranslation();
     const [loading, setLoading] = useState(false);
-    const token = '';
+    const token = '123';
     const navigate = useNavigate();
     const [cartItems, setCartItems] = useState([
         { id: 1, name: 'Product 1Product 1Product 1Product 1Product 1Product 1Product 1', img: logo, price: 1000 },
@@ -118,8 +118,8 @@ export default function Header() {
                                             </div>
 
                                             <ul className="user-popup">
-                                                <li>{t('my_account')}</li>
-                                                <li>{t('my_purchases')}</li>
+                                                <li onClick={() => handleNavigate("/user/profile")}>{t('my_account')}</li>
+                                                <li onClick={() => handleNavigate("/user/purchases")}>{t('my_purchases')}</li>
                                                 <li>{t('logout')}</li>
                                             </ul>
                                         </div>

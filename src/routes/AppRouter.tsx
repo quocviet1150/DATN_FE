@@ -7,6 +7,9 @@ import Register from "../pages/account/register/Register";
 import ForgotPassword from "../pages/account/forgotPassword/ForgotPassword";
 import Verify from "../pages/account/verify/Verify";
 import Products from "../pages/products/Products";
+import User from "../pages/user/User";
+import Profile from "../pages/user/profile/Profile";
+import Purchase from "../pages/user/purchase/Purchase";
 
 export default function AppRouter() {
   return (
@@ -15,6 +18,10 @@ export default function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/user" element={<User />} >
+          <Route path="profile" element={<Profile />} />
+          <Route path="purchases" element={<Purchase />} />
+        </Route>
       </Route>
 
       <Route element={<AuthLayout />}>
