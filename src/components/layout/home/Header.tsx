@@ -9,14 +9,19 @@ import logo from "../../../assets/quickbuyshopwhite.png";
 import Loading from '../../common/loading/Loading';
 import NavbarSearch from '../../common/navbarSearch/NavbarSearch';
 import './Header.css';
+import Button from '../../common/button/Button';
 
 export default function Header() {
 
     const { t, i18n } = useTranslation();
     const [loading, setLoading] = useState(false);
     const token = '';
-    const cartCount = 25;
     const navigate = useNavigate();
+    const [cartItems, setCartItems] = useState([
+        { id: 1, name: 'Product 1Product 1Product 1Product 1Product 1Product 1Product 1', img: logo, price: 1000 },
+        { id: 2, name: 'Product 2', img: logo, price: 2000 },
+        { id: 3, name: 'Product 3', img: logo, price: 3000 }
+    ]);
 
     const getLanguageLabel = () => {
         return i18n.language === "vi" ? "Tiếng Việt" : "English";
@@ -148,12 +153,52 @@ export default function Header() {
                         <div className='navbar-header-cart-container'>
                             <div className="navbar-header-cart">
                                 <FaShoppingCart className='cart-icon' />
-                                <span className="cart-badge">{cartCount}</span>
+                                <span className="cart-badge">{cartItems?.length}</span>
+
+                                <div className="cart-popup"
+                                    style={{
+                                        maxHeight: cartItems?.length > 0 ? "350px" : "200px",
+                                        height: cartItems?.length > 0 ? "auto" : "200px",
+                                    }}
+                                >
+                                    <div className="cart-popup-arrow"></div>
+                                    {cartItems?.length === 0 ? (
+                                        <div className="cart-popup-empty">
+                                            <div className="cart-popup-empty-icon">
+                                                <FaShoppingCart size={50} color='#fb8016' />
+                                            </div>
+                                            <div className="cart-popup-empty-text">
+                                                {t('cart_empty')}
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <ul className="cart-popup-list">
+                                            <div className='cart-popup-list-header'>{t('cart')}</div>
+                                            {cartItems?.map((item) => (
+                                                <div className='cart-popup-item' key={item?.id}>
+                                                    <div className='cart-popup-item-image'>
+                                                        <img src={item?.img} alt={item?.name} />
+                                                    </div>
+                                                    <div className='cart-popup-item-name'>{item?.name}</div>
+                                                    <div className='cart-popup-item-price'>
+                                                        {item?.price}
+                                                        <span className="currency-symbol">đ</span>
+                                                    </div>
+                                                </div>
+                                            ))}
+
+                                            <div className='cart-popup-footer'>
+                                                {cartItems?.length} {t('product')}
+                                                <Button className='btn-login-often' onClick={() => handleNavigate("/cart")}>{t('view_cart')}</Button>
+                                            </div>
+                                        </ul>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </header >
     );
 }

@@ -69,5 +69,9 @@
   "my_purchases": "Đơn mua",
   "search": {
     "placeholder_input_header": "Tìm kiếm sản phẩm, thương hiệu..."
-  }
+  },
+  "cart_empty": "Chưa có sản phẩm trong giỏ hàng",
+  "product": "Sản phẩm",
+  "cart": "Giỏ hàng",
+  "view_cart": "Xem giỏ hàng"
 }

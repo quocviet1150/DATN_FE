@@ -6,6 +6,7 @@ import Login from "../pages/account/login/Login";
 import Register from "../pages/account/register/Register";
 import ForgotPassword from "../pages/account/forgotPassword/ForgotPassword";
 import Verify from "../pages/account/verify/Verify";
+import Products from "../pages/products/Products";
 
 export default function AppRouter() {
   return (
@@ -13,6 +14,7 @@ export default function AppRouter() {
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/products" element={<Products />} />
       </Route>
 
       <Route element={<AuthLayout />}>
