@@ -29,7 +29,7 @@
 
 .user-sidebar-link:hover {
     background: #fef4ee;
-    color: #fb6433;
+    color: #33abfb;
 }
 
 .user-sidebar-link.active {
@@ -56,25 +56,27 @@
 }
 
 .user-submenu {
-  display: flex;
-  flex-direction: column;
-  margin-left: 32px;
-  margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: start;
+    margin-top: 6px;
 }
 
 .user-submenu-link {
-  color: #555;
-  text-decoration: none;
-  padding: 6px 0;
-  font-size: 14px;
-  transition: color 0.2s;
+    color: #555;
+    text-decoration: none;
+    padding: 6px 0;
+    font-size: 12px;
+    transition: color 0.2s;
 }
 
 .user-submenu-link:hover {
-  color: #fb6433;
+    background: #fef4ee;
+    color: #33abfb;
 }
 
-.user-submenu-link.active svg {
+.user-submenu-link.active {
     color: #fb6433 !important;
 }
 

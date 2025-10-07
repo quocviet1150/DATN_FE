@@ -55,7 +55,6 @@ const User = () => {
                         </div>
                     </div>
                     <aside className="user-sidebar">
-                        {/* MENU 1: Hồ sơ */}
                         <div className="user-sidebar-item">
                             <div
                                 className="user-sidebar-link"
@@ -68,40 +67,41 @@ const User = () => {
                             </div>
 
                             {openMenu === "profile" && (
-                                <div className="user-submenu">
-                                    <NavLink
-                                        to="profile"
-                                        end
-                                        className={({ isActive }) =>
-                                            isActive ? "user-submenu-link active" : "user-submenu-link"
-                                        }
-                                    >
-                                        {t("personal_info")}
-                                    </NavLink>
+                                <div style={{ width: '100%', display: 'flex', gap: '10px' }}>
+                                    <div style={{ width: '20%' }}></div>
+                                    <div className="user-submenu">
+                                        <NavLink
+                                            to="/user/profile"
+                                            end
+                                            className={({ isActive }) =>
+                                                `user-submenu-link ${isActive ? "active" : ""}`
+                                            }
+                                        >
+                                            {t("personal_info")}
+                                        </NavLink>
 
-                                    <NavLink
-                                        to="profile/password"
-                                        className={({ isActive }) =>
-                                            isActive ? "user-submenu-link active" : "user-submenu-link"
-                                        }
-                                    >
-                                        {t("change_password")}
-                                    </NavLink>
+                                        <NavLink
+                                            to="/user/profile/password"
+                                            className={({ isActive }) =>
+                                                `user-submenu-link ${isActive ? "active" : ""}`
+                                            }
+                                        >
+                                            {t("change_password")}
+                                        </NavLink>
 
-                                    <NavLink
-                                        to="profile/address"
-                                        className={({ isActive }) =>
-                                            isActive ? "user-submenu-link active" : "user-submenu-link"
-                                        }
-                                    >
-                                        {t("address")}
-                                    </NavLink>
-
+                                        <NavLink
+                                            to="/user/profile/address"
+                                            className={({ isActive }) =>
+                                                `user-submenu-link ${isActive ? "active" : ""}`
+                                            }
+                                        >
+                                            {t("profile_address")}
+                                        </NavLink>
+                                    </div>
                                 </div>
                             )}
                         </div>
 
-                        {/* MENU 2: Đơn mua */}
                         <div className="user-sidebar-item">
                             <NavLink to="purchases" className="user-sidebar-link">
                                 <div className="user-sidebar-icon">

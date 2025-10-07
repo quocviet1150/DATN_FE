@@ -73,5 +73,8 @@
   "cart_empty": "No products in the cart",
   "product": "Product",
   "cart": "Carts",
-  "view_cart": "View Cart"
+  "view_cart": "View Cart",
+  "personal_info": "Profile",
+  "change_password": "Change Password",
+  "profile_address": "Address"
 }
