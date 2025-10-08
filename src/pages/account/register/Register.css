@@ -3,7 +3,7 @@
     margin: 80px auto 0 auto;
     max-width: 100%;
     box-sizing: border-box;
-    background-color: #fb8016;
+    background-color: #d9eef1;
     display: flex;
     justify-content: center;
 }
@@ -15,7 +15,7 @@
 
 .register-logo {
     width: 50%;
-    background-image: url(../../../../assets/quickbuyshopwhite.png);
+    background-image: url(../../../assets/quickbuyshop.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

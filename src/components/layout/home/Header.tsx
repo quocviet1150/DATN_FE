@@ -5,7 +5,7 @@ import { AiFillFacebook } from 'react-icons/ai';
 import { FaChevronDown, FaQuestionCircle, FaShoppingCart } from "react-icons/fa";
 import { SiInstagram, SiZalo } from 'react-icons/si';
 import { useNavigate } from 'react-router-dom';
-import logo from "../../../assets/quickbuyshopwhite.png";
+import logo from "../../../assets/quickbuyshop.png";
 import Loading from '../../common/loading/Loading';
 import NavbarSearch from '../../common/navbarSearch/NavbarSearch';
 import './Header.css';
@@ -15,7 +15,7 @@ export default function Header() {
 
     const { t, i18n } = useTranslation();
     const [loading, setLoading] = useState(false);
-    const token = '123';
+    const token = '';
     const navigate = useNavigate();
     const [cartItems, setCartItems] = useState([
         { id: 1, name: 'Product 1Product 1Product 1Product 1Product 1Product 1Product 1', img: logo, price: 1000 },
